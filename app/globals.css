@@ -2,26 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.icon-btn-effect {
+  @apply rounded-full w-10 h-10 p-2 flex justify-center items-center hover:bg-gray-200 active:bg-gray-300 overflow-hidden cursor-pointer transition-colors;
+}
+.icon-btn-effect-sm {
+  @apply rounded-full w-6 h-6 p-1 flex justify-center items-center hover:bg-gray-200 active:bg-gray-300 overflow-hidden cursor-pointer transition-colors;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.clickable {
+  @apply rounded-sm cursor-pointer p-2 hover:bg-gray-200 active:bg-gray-300 transition-colors;
+}
+.clickable-flexed {
+  @apply rounded-sm flex gap-2 items-center cursor-pointer p-2 hover:bg-gray-200 active:bg-gray-300 transition-colors;
+}
+.clickable-flexed-no-p {
+  @apply rounded-sm flex gap-2 items-center cursor-pointer hover:bg-gray-200 active:bg-gray-300 transition-colors;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.clickable-l {
+  @apply rounded-sm cursor-pointer p-2 hover:bg-gray-100 active:bg-gray-200 transition-colors;
+}
+.clickable-l-flexed {
+  @apply rounded-sm flex gap-2 items-center cursor-pointer p-2 hover:bg-gray-100 active:bg-gray-200 transition-colors;
+}
+.clickable-l-flexed-no-p {
+  @apply rounded-sm flex gap-2 items-center cursor-pointer hover:bg-gray-100 active:bg-gray-200 transition-colors;
+}
+
+.no-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+body *::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+  padding: 2; /* make scrollbar transparent */
+}
+body *::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
 }
