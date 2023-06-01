@@ -7,11 +7,6 @@ import Nav from "./components/navigation/Nav";
 import RightSidebar from "./components/rightSidebar/RightSidebar";
 import { usePathname } from "next/navigation";
 
-export const metadata = {
-  title: "Facebook clone home page",
-  description: "Facebook clone home page",
-};
-
 export default function RootLayout({
   children,
 }: {
